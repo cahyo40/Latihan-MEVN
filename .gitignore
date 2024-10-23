@@ -98,3 +98,31 @@ public
 # Temporary folders
 tmp/
 temp/
+
+# Client-side dependencies and build files
+client/node_modules/
+client/.pnp
+client/.pnp.js
+
+# Client-side production build
+client/build/
+
+# Client-side misc
+client/.DS_Store
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+
+# Client-side logs
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# Client-side coverage
+client/coverage/
+
+# Client-side IDE files
+client/.idea/
+client/.vscode/
+
