@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.APP_PORT;
 
 // middleware
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -30,7 +30,13 @@ if (process.env.NODE_ENV === 'development') {
 // server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+
 });
+
+
+app.use('/api/v1/test', (req, res) => {
+    res.status(200).json({ message: 'Hello World' })
+})
 
 // router
 app.use('/api/v1/auth', authRouter)
